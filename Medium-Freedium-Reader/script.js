@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Medium Freedium Reader
 // @namespace    https://github.com/DiyRex/UserScripts/Medium-Freedium-Reader
-// @version      1.1.0
+// @version      1.2.0
 // @description  Adds "Read Free" button to Medium articles to open them in Freedium
 // @author       DiyRex
 // @match        https://medium.com/*
@@ -111,7 +111,7 @@
         const currentUrl = window.location.href.split('?')[0];
         const btn = document.createElement('a');
         btn.className = 'freedium-btn freedium-float';
-        btn.href = 'https://freedium.cfd/' + currentUrl;
+        btn.href = 'https://freedium-mirror.cfd/' + currentUrl;
         btn.target = '_blank';
         btn.rel = 'noopener noreferrer';
         btn.innerHTML = '🔓 Read Free';
@@ -152,7 +152,7 @@
             // Create button
             const btn = document.createElement('a');
             btn.className = 'freedium-btn';
-            btn.href = 'https://freedium.cfd/' + href;
+            btn.href = 'https://freedium-mirror.cfd/' + href;
             btn.target = '_blank';
             btn.rel = 'noopener noreferrer';
             btn.innerHTML = '🔓 Free';
